@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>evening</title>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  
+      <link rel="stylesheet" href="css/style.css">
+<script>
+	function toggleTheClass(el) {
+		if (el.className == "class1") {
+			el.className = "class2";
+		} else {
+			el.className = "class1";
+		}
+	}
+
+	function play() {
+		var audio = document.getElementById("audio");
+		return audio.paused ? audio.play() : audio.pause()
+	}
+
+	function toggleBG() {
+		var background = document.getElementById("background");
+		if (background.className == "top") {
+			background.className = "transparent";
+		} else {
+			background.className = "top";
+		}
+
+	}
+
+
+</script>
+  
+</head>
+
+<body>
+  <img class="bottom" src="eveningPurple.png"/>
+  <img id="background" class="top" src="dayTime.png"/>
+
+  <h1 data-heading="evening" class="class1" onclick="toggleTheClass(this); play(); toggleBG()">evening</h1>
+  
+  <audio id="audio" src="light.mp3" ></audio>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,110 @@
+html,
+body {
+
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+body img {
+  position:absolute;
+  left:0;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+.bottom {
+  position:absolute;
+  height:100%;
+  width:100%;
+  margin:0 auto;
+
+  transition: opacity 1s ease-in-out;
+}
+
+.top {
+  position:absolute;
+  height:100%;
+  width:100%;
+  margin:0 auto;
+
+    transition: opacity 1s ease-in-out;
+}
+
+.transparent {
+  opacity: 0;
+}
+
+.class1 {
+  font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
+  font-style: normal;
+  font-weight: 200;
+  letter-spacing: 20px;
+
+  font-size: 10vw;
+  text-align: center;
+  line-height: 1;
+  margin: 0;
+  top: 50%;
+  left: 50%;
+
+          transform: translate(-50%, -50%);
+  position: absolute;
+  color: #2d2d2d;
+
+}
+
+.class2 {
+  font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
+  font-style: normal;
+  font-weight: 200;
+  letter-spacing: 20px;
+
+  font-size: 10vw;
+  text-align: center;
+  line-height: 1;
+  margin: 0;
+  top: 50%;
+  left: 50%;
+
+          transform: translate(-50%, -50%);
+  position: absolute;
+  color: #2d2d2d;
+
+}
+
+.class2:before {
+
+  content: attr(data-heading);
+  position: absolute;
+  color: #ffcc00;
+  width: 100%;
+  z-index: 5;
+  text-shadow: none;
+
+  text-align: left;
+          animation-name: flicker;
+          animation-duration: 1s;
+          animation-iteration-count: 2;
+          animation-timing-function: ease-out;
+          animation-fill-mode: forwards;
+}
+
+/*the animation will gradually change from the current style to the new style at certain times.*/
+
+@keyframes flicker {
+  0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% { /*when the style change will happen in percent*/
+    opacity: .99;
+    text-shadow: -1px -1px 0 rgba(255, 255, 255, 0.4), 1px -1px 0 rgba(255, 255, 255, 0.4), -1px 1px 0 rgba(255, 255, 255, 0.4), 1px 1px 0 rgba(255, 255, 255, 0.4), 0 -2px 8px, 0 0 2px, 0 0 5px #ff7e00, 0 0 15px #ff4444, 0 0 2px #ff7e00, 0 2px 3px #000;
+  }
+  20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+    opacity: 0.4;
+    text-shadow: none;
+  }
+}
+
+
+
